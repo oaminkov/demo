@@ -13,7 +13,7 @@ create table device (
     id int8 not null,
     power boolean not null,
     voltage int4,
-    id_house int8 not null,
+    id_house int8,
     primary key (id)
 );
 

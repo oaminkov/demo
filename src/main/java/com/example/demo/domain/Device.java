@@ -26,7 +26,7 @@ public class Device {
     private Integer voltage;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn (nullable = false, name = "id_house")
+    @JoinColumn (name = "id_house")
     private House house;
 
     public Device(Boolean power) {
