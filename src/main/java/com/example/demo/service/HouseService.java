@@ -16,6 +16,13 @@ public class HouseService {
         this.houseRepo = houseRepo;
     }
 
+    public boolean isExists(String description) {
+        if (houseRepo.findByDescription(description) == null) {
+            return false;
+        }
+        return true;
+    }
+
     public List<House> listAll() {
         return houseRepo.findAll();
     }

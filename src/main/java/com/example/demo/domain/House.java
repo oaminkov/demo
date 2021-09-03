@@ -10,7 +10,6 @@ import java.util.List;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 
 @Entity
@@ -29,5 +28,13 @@ public class House {
 
     public House(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "House{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

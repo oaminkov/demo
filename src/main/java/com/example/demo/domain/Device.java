@@ -9,7 +9,6 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 
 @Entity
@@ -36,5 +35,15 @@ public class Device {
     public Device(Boolean power, Integer voltage) {
         this.power = power;
         this.voltage = voltage;
+    }
+
+    @Override
+    public String toString() {
+        return "Device{" +
+                "id=" + id +
+                ", power=" + power +
+                ", voltage=" + voltage +
+                ", house=" + house +
+                '}';
     }
 }
